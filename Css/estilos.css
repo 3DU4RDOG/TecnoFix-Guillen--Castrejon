@@ -1,0 +1,250 @@
+/* ===================================================
+   TecnoFix Lima - Hoja de estilos general
+   Paleta tomada del logo: naranja, negro y blanco
+   =================================================== */
+
+:root {
+  --naranja: #f96a07;          /* naranja del logo (fondos, botones, acentos) */
+  --naranja-hover: #e05a00;
+  --naranja-texto: #c2410c;    /* naranja oscuro para texto sobre fondo claro (contraste 5.2:1) */
+  --naranja-suave: #fff1e8;    /* fondo claro con tinte naranja */
+  --negro: #111111;
+  --gris-texto: #333333;
+
+  /* Reemplaza el azul de Bootstrap por la identidad de la marca */
+  --bs-primary: #c2410c;
+  --bs-primary-rgb: 194, 65, 12;
+  --bs-link-color: #c2410c;
+  --bs-link-hover-color: #e05a00;
+}
+
+/* Oculta las plantillas de AngularJS hasta que la librería las procese */
+[ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+::selection {
+  background: var(--naranja);
+  color: var(--negro);
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--gris-texto);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--negro);
+}
+
+.acento {
+  color: var(--naranja);
+}
+
+/* ---------- Barra de navegación (blanca, para que el logo luzca) ---------- */
+.navbar-tecnofix {
+  --bs-navbar-color: var(--negro);
+  --bs-navbar-hover-color: var(--naranja-texto);
+  --bs-navbar-active-color: var(--naranja-texto);
+  background-color: #ffffff;
+  border-bottom: 4px solid var(--naranja);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding-block: 0.4rem;
+}
+
+.navbar-tecnofix .nav-link {
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+  margin-inline: 0.25rem;
+}
+
+.navbar-tecnofix .nav-link.active {
+  border-bottom-color: var(--naranja);
+}
+
+/* El logo es cuadrado con mucho margen: se recorta a la franja del nombre */
+.navbar-brand img {
+  width: 150px;
+  height: 60px;
+  object-fit: cover;
+  object-position: 50% 40%;
+}
+
+.marca-lima {
+  background: var(--negro);
+  color: var(--naranja);
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  margin-left: 0.4rem;
+}
+
+/* ---------- Cabecera de páginas internas ---------- */
+.cabecera-pagina {
+  background-color: var(--negro);
+  color: #ffffff;
+  border-bottom: 5px solid var(--naranja);
+}
+
+.cabecera-pagina h1 {
+  color: #ffffff;
+}
+
+.cabecera-pagina .lead {
+  color: #d9d9d9;
+}
+
+/* ---------- Tarjetas ---------- */
+.tarjeta-destacada {
+  width: 100%;
+  padding: 30px;
+  border: 2px solid #eeeeee;
+  border-left: 8px solid var(--naranja);
+  margin: 25px 0;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-servicio {
+  border-top: 4px solid var(--naranja) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-servicio:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-header.bg-dark {
+  border-bottom: 4px solid var(--naranja);
+}
+
+/* ---------- Botones ---------- */
+.btn-primary {
+  --bs-btn-color: var(--negro);
+  --bs-btn-bg: var(--naranja);
+  --bs-btn-border-color: var(--naranja);
+  --bs-btn-hover-color: var(--negro);
+  --bs-btn-hover-bg: var(--naranja-hover);
+  --bs-btn-hover-border-color: var(--naranja-hover);
+  --bs-btn-active-color: var(--negro);
+  --bs-btn-active-bg: var(--naranja-hover);
+  --bs-btn-active-border-color: var(--naranja-hover);
+  --bs-btn-focus-shadow-rgb: 249, 106, 7;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--naranja-texto);
+  --bs-btn-border-color: var(--naranja);
+  --bs-btn-hover-color: var(--negro);
+  --bs-btn-hover-bg: var(--naranja);
+  --bs-btn-hover-border-color: var(--naranja);
+  --bs-btn-active-color: var(--negro);
+  --bs-btn-active-bg: var(--naranja-hover);
+  --bs-btn-active-border-color: var(--naranja-hover);
+  --bs-btn-focus-shadow-rgb: 249, 106, 7;
+}
+
+/* ---------- Formularios ---------- */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--naranja);
+  box-shadow: 0 0 0 0.25rem rgba(249, 106, 7, 0.25);
+}
+
+/* ---------- Tablas ---------- */
+.table {
+  --bs-table-striped-bg: rgba(249, 106, 7, 0.06);
+  --bs-table-hover-bg: rgba(249, 106, 7, 0.14);
+}
+
+.table thead.table-dark {
+  --bs-table-bg: var(--negro);
+  --bs-table-border-color: var(--negro);
+}
+
+.table thead.table-dark th {
+  border-bottom: 3px solid var(--naranja);
+}
+
+/* ---------- Cotizador ---------- */
+.precio {
+  color: var(--negro);
+}
+
+/* ---------- Carrusel ---------- */
+.hero-carousel .carousel-item {
+  height: 500px;
+}
+
+.hero-carousel .carousel-item img {
+  object-fit: cover;
+  height: 100%;
+  filter: brightness(0.7);
+}
+
+.hero-carousel .carousel-caption {
+  border-bottom: 4px solid var(--naranja);
+}
+
+.hero-carousel .carousel-indicators [data-bs-target] {
+  background-color: var(--naranja);
+  height: 4px;
+}
+
+@media (max-width: 767.98px) {
+  .hero-carousel .carousel-item {
+    height: 320px;
+  }
+  .hero-carousel .carousel-caption {
+    bottom: 1.5rem;
+    padding: 0.75rem !important;
+  }
+  .hero-carousel .carousel-caption h2 {
+    font-size: 1.4rem;
+  }
+  .navbar-brand img {
+    width: 120px;
+    height: 48px;
+  }
+}
+
+/* ---------- Pie de página ---------- */
+footer {
+  margin-top: auto;
+  background-color: var(--negro);
+  color: #ffffff;
+  border-top: 4px solid var(--naranja);
+  padding: 40px 0 20px 0;
+}
+
+footer a {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--naranja);
+  text-decoration: underline;
+}
+
+/* ---------- Accesibilidad ---------- */
+a:focus-visible,
+button:focus-visible,
+.form-control:focus-visible,
+.form-select:focus-visible {
+  outline: 3px solid var(--naranja);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-servicio { transition: none; }
+  .card-servicio:hover { transform: none; }
+}

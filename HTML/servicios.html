@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="tecnoFixApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tarifario de servicios técnicos y cotizador en línea de TecnoFix Lima.">
+  <meta name="theme-color" content="#0d1b2a">
+  <title>Servicios y Cotizador | TecnoFix Lima</title>
+  <link rel="icon" type="image/x-icon" href="../Favicon/TecnoFix.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../Css/estilos.css">
+  <script src="https://cdn.jsdelivr.net/npm/angular@1.5.11/angular.min.js"></script>
+</head>
+<body ng-controller="CotizadorController">
+
+  <nav class="navbar navbar-expand-lg navbar-tecnofix sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="../index.html">
+        <img src="../Imagenes/TecnoFix.jpg" alt="Logo de TecnoFix Lima" width="150" height="60">
+        <span class="marca-lima">LIMA</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto fs-6">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="servicios.html">Servicios y Cotizador</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Solicitar Soporte</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="cabecera-pagina text-center py-5">
+    <div class="container">
+      <h1 class="fw-bold">Servicios y Cotizador</h1>
+      <p class="lead mb-0">Conoce nuestras tarifas y calcula el costo estimado de tu reparación.</p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <section class="mb-5" aria-labelledby="t-tarifas">
+      <h2 id="t-tarifas" class="h3 fw-bold mb-3">Tarifario de servicios</h2>
+      <div class="table-responsive shadow-sm">
+        <table class="table table-hover table-striped border align-middle mb-0">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">Código</th>
+              <th scope="col">Servicio</th>
+              <th scope="col">Tiempo estimado</th>
+              <th scope="col" class="text-end">Costo</th>
+            </tr>
+          </thead>
+          <tbody ng-cloak>
+            <tr ng-repeat="s in servicios">
+              <td>{{ s.codigo }}</td>
+              <td>{{ s.nombre }}</td>
+              <td>{{ s.tiempo }}</td>
+              <td class="text-end">S/ {{ s.costo | number:2 }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-muted small mt-2">A estos montos se suma un cargo de revisión según el tipo de equipo (ver cotizador). Las reparaciones con repuestos, como pantallas o baterías, se cotizan después del diagnóstico.</p>
+    </section>
+
+    <section class="tarjeta-destacada bg-light" aria-labelledby="t-cot">
+      <h2 id="t-cot" class="h4 fw-bold text-primary mb-3">🧮 Calcula tu presupuesto</h2>
+      <form>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <label for="disp" class="form-label fw-bold">1. Tipo de equipo</label>
+            <select id="disp" class="form-select form-select-lg" ng-model="seleccion.dispositivo"
+                    ng-options="d as (d.nombre + ' (S/ ' + d.cargo + ')') for d in dispositivos">
+              <option value="">Seleccionar...</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="serv" class="form-label fw-bold">2. Servicio requerido</label>
+            <select id="serv" class="form-select form-select-lg" ng-model="seleccion.servicio"
+                    ng-options="s as (s.nombre + ' (S/ ' + s.costo + ')') for s in servicios">
+              <option value="">Seleccionar...</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mt-4 p-4 bg-white border rounded-3 text-center shadow-sm" aria-live="polite">
+          <h3 class="h5 text-muted mb-1">Monto estimado</h3>
+          <span class="precio fw-bold display-4" ng-cloak>S/ {{ total() | number:2 }}</span>
+          <div ng-show="seleccion.dispositivo && seleccion.servicio" ng-cloak class="mt-3">
+            <p class="mb-1">Revisión del equipo S/ {{ seleccion.dispositivo.cargo | number:2 }} + {{ seleccion.servicio.nombre }} S/ {{ seleccion.servicio.costo | number:2 }}</p>
+            <p class="small text-muted">Monto referencial: el costo final se confirma al revisar tu equipo en el taller.</p>
+            <a href="contacto.html" class="btn btn-primary fw-bold">Solicitar este servicio</a>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row gy-3 text-center text-md-start">
+        <div class="col-md-5">
+          <strong class="acento fs-5">TecnoFix Lima</strong>
+          <p class="small mb-0 mt-1">Servicio técnico y reparación de laptops, PC, smartphones y tablets.</p>
+        </div>
+        <div class="col-md-4 small">
+          <strong>Horario de atención</strong><br>
+          Lunes a Sábado, 9:00 a.m. a 7:00 p.m.<br>
+          Cercado de Lima
+        </div>
+        <div class="col-md-3 small">
+          <strong>Enlaces</strong>
+          <ul class="list-unstyled mb-0">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios y Cotizador</a></li>
+            <li><a href="contacto.html">Solicitar Soporte</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="small text-center mb-0 mt-4 pt-3 border-top border-secondary">&copy; 2026 TecnoFix Lima. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../Js/main.js"></script>
+</body>
+</html>
