@@ -3,146 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Servicio técnico y reparación de laptops, PC, smartphones y tablets en Cercado de Lima. Cotiza tu reparación en línea.">
-  <meta name="theme-color" content="#0d1b2a">
-  <title>TecnoFix Lima | Servicio Técnico de Laptops, PC y Smartphones</title>
+  <meta name="description" content="Servicio técnico y reparación de laptops, PC y smartphones en Cercado de Lima.">
+  <title>TecnoFix Lima | Servicio Técnico y Reparación</title>
   <link rel="icon" type="image/x-icon" href="Favicon/TecnoFix.ico">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="Css/estilos.css">
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-tecnofix sticky-top">
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <a class="navbar-brand" href="index.html">
         <img src="Imagenes/TecnoFix.jpg" alt="Logo de TecnoFix Lima" width="150" height="60">
-        <span class="marca-lima">LIMA</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto fs-6">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="HTML/servicios.html">Servicios y Cotizador</a></li>
-          <li class="nav-item"><a class="nav-link" href="HTML/contacto.html">Solicitar Soporte</a></li>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link " href="HTML/servicios.html">Servicios y Cotizador</a></li>
+          <li class="nav-item"><a class="nav-link " href="HTML/contacto.html">Solicitar Soporte</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <main>
-  <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" aria-label="Servicios destacados">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="Imagenes/Tecnico.jpg" class="d-block w-100" alt="Técnico reparando una laptop">
-        <div class="carousel-caption text-start bg-dark bg-opacity-75 p-4 rounded">
-          <h2 class="display-5 fw-bold acento">Reparación profesional de laptops</h2>
-          <p class="fs-5 d-none d-sm-block mb-0">Diagnóstico electrónico preciso y reemplazo de componentes.</p>
+    <!-- Carrusel -->
+    <div id="carrusel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active" aria-label="Imagen 1"></button>
+        <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1" aria-label="Imagen 2"></button>
+        <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2" aria-label="Imagen 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="Imagenes/Tecnico.jpg" class="d-block w-100" alt="Técnico reparando una laptop">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+            <h2 class="fw-bold acento">Reparación profesional de laptops</h2>
+            <p>Diagnóstico electrónico preciso y reemplazo de componentes.</p>
+          </div>
         </div>
-      </div>
-      <div class="carousel-item">
-        <img src="Imagenes/Celulares.jpg" class="d-block w-100" alt="Smartphones en reparación" loading="lazy">
-        <div class="carousel-caption text-end bg-dark bg-opacity-75 p-4 rounded">
-          <h2 class="display-5 fw-bold acento">Soporte especializado para smartphones</h2>
-          <p class="fs-5 d-none d-sm-block mb-0">Cambio de pantallas, baterías y microsoldadura avanzada.</p>
+        <div class="carousel-item">
+          <img src="Imagenes/Celulares.jpg" class="d-block w-100" alt="Celulares en reparación">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+            <h2 class="fw-bold acento">Soporte para smartphones</h2>
+            <p>Cambio de pantallas, baterías y microsoldadura.</p>
+          </div>
         </div>
-      </div>
-      <div class="carousel-item">
-        <img src="Imagenes/mantenimiento.jpg" class="d-block w-100" alt="Mantenimiento de computadoras" loading="lazy">
-        <div class="carousel-caption text-center bg-dark bg-opacity-75 p-4 rounded">
-          <h2 class="display-5 fw-bold acento">Mantenimiento y sistema operativo</h2>
-          <p class="fs-5 d-none d-sm-block mb-0">Limpieza interna, formateo e instalación de sistema operativo para que tu equipo rinda como nuevo.</p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Siguiente</span>
-    </button>
-  </div>
-
-  <section class="container my-5">
-    <div class="tarjeta-destacada">
-      <h1 class="h3 text-primary fw-bold mb-3">Tu equipo en manos de técnicos especializados</h1>
-      <p class="lead">En TecnoFix Lima reparamos y damos mantenimiento a equipos de estudiantes, profesionales y empresas, con repuestos de calidad y tiempos de respuesta claros.</p>
-      <div class="d-flex flex-wrap gap-2">
-        <a href="HTML/servicios.html" class="btn btn-primary btn-lg fw-bold">Cotiza tu reparación</a>
-        <a href="HTML/contacto.html" class="btn btn-outline-primary btn-lg fw-bold">Solicitar soporte</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="container mb-5" aria-labelledby="t-serv">
-    <h2 id="t-serv" class="h3 fw-bold mb-3">Qué reparamos</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card card-servicio h-100 border-0 shadow-sm">
-          <div class="card-body">
-            <h3 class="h5 fw-bold">💻 Laptops y PC</h3>
-            <p class="mb-0">Diagnóstico, mantenimiento y cambio de componentes.</p>
+        <div class="carousel-item">
+          <img src="Imagenes/mantenimiento.jpg" class="d-block w-100" alt="Mantenimiento de computadoras">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+            <h2 class="fw-bold acento">Mantenimiento y sistema operativo</h2>
+            <p>Limpieza interna, formateo e instalación de sistema operativo.</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card card-servicio h-100 border-0 shadow-sm">
-          <div class="card-body">
-            <h3 class="h5 fw-bold">📱 Smartphones y tablets</h3>
-            <p class="mb-0">Cambio de pantallas y baterías, y microsoldadura.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card card-servicio h-100 border-0 shadow-sm">
-          <div class="card-body">
-            <h3 class="h5 fw-bold">🛠️ Sistema operativo</h3>
-            <p class="mb-0">Formateo, instalación y limpieza para recuperar el rendimiento.</p>
-          </div>
-        </div>
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
     </div>
-  </section>
 
-  <section class="container mb-5" aria-labelledby="t-ubic">
-    <div class="bg-light p-4 rounded-4 shadow-sm border">
-      <h2 id="t-ubic" class="h3 fw-bold text-dark mb-3">📍 Dónde encontrarnos</h2>
-      <!-- COMPLETAR: agrega aquí la dirección exacta del taller y, si quieres, un mapa de Google Maps -->
-      <p class="fs-5 mb-2"><strong>Zona:</strong> Cercado de Lima, Lima.</p>
-      <p class="mb-2"><strong>Horario de atención:</strong> Lunes a Sábado de 9:00 a.m. a 7:00 p.m.</p>
-      <p class="fw-bold text-primary mb-0">Atención en taller y recojo a domicilio coordinado.</p>
-    </div>
-  </section>
+    <!-- Presentación -->
+    <section class="container my-5">
+      <div class="tarjeta">
+        <h1 class="h3 fw-bold text-primary">Tu equipo en manos de técnicos especializados</h1>
+        <p class="lead">En TecnoFix Lima reparamos y damos mantenimiento a equipos de estudiantes, profesionales y empresas, con repuestos de calidad y tiempos de respuesta claros.</p>
+        <a href="HTML/servicios.html" class="btn btn-primary fw-bold">Cotiza tu reparación</a>
+        <a href="HTML/contacto.html" class="btn btn-dark fw-bold">Solicitar soporte</a>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="container mb-5">
+      <h2 class="h3 fw-bold mb-3">Qué reparamos</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card tarjeta-servicio h-100 shadow-sm">
+            <img src="Imagenes/servicio-laptop.svg" class="card-img-top" alt="Ilustración de una laptop en reparación" width="400" height="260" loading="lazy">
+            <div class="card-body">
+              <h3 class="h5 fw-bold">Laptops y PC</h3>
+              <p class="mb-0">Diagnóstico, mantenimiento y cambio de componentes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card tarjeta-servicio h-100 shadow-sm">
+            <img src="Imagenes/servicio-celular.svg" class="card-img-top" alt="Ilustración de un celular con la pantalla dañada" width="400" height="260" loading="lazy">
+            <div class="card-body">
+              <h3 class="h5 fw-bold">Smartphones y tablets</h3>
+              <p class="mb-0">Cambio de pantallas y baterías, y microsoldadura.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card tarjeta-servicio h-100 shadow-sm">
+            <img src="Imagenes/servicio-sistema.svg" class="card-img-top" alt="Ilustración de una ventana de instalación del sistema operativo" width="400" height="260" loading="lazy">
+            <div class="card-body">
+              <h3 class="h5 fw-bold">Sistema operativo</h3>
+              <p class="mb-0">Formateo, instalación y limpieza para recuperar el rendimiento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section class="container mb-5">
+      <div class="bg-light p-4 rounded border">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-6">
+            <h2 class="h3 fw-bold mb-3">Dónde encontrarnos</h2>
+            <!-- COMPLETAR: cambia la dirección de ejemplo por la real -->
+            <p class="mb-1"><strong>Dirección:</strong> Av. Ejemplo 123, Cercado de Lima</p>
+            <p class="mb-1"><strong>Horario:</strong> Lunes a Sábado de 9:00 a.m. a 7:00 p.m.</p>
+            <p class="mb-0 fw-bold text-primary">Atención en taller y recojo a domicilio coordinado.</p>
+          </div>
+          <div class="col-md-6">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Cercado+de+Lima" target="_blank" rel="noopener">
+              <img src="Imagenes/mapa.svg" class="img-fluid rounded border" alt="Mapa de la ubicación de TecnoFix Lima en Cercado de Lima" width="600" height="380">
+            </a>
+            <p class="small text-muted mt-1 mb-0">Haz clic en el mapa para abrir Google Maps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <div class="container">
-      <div class="row gy-3 text-center text-md-start">
-        <div class="col-md-5">
-          <strong class="acento fs-5">TecnoFix Lima</strong>
-          <p class="small mb-0 mt-1">Servicio técnico y reparación de laptops, PC, smartphones y tablets.</p>
-        </div>
-        <div class="col-md-4 small">
-          <strong>Horario de atención</strong><br>
-          Lunes a Sábado, 9:00 a.m. a 7:00 p.m.<br>
-          Cercado de Lima
-        </div>
-        <div class="col-md-3 small">
-          <strong>Enlaces</strong>
-          <ul class="list-unstyled mb-0">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="HTML/servicios.html">Servicios y Cotizador</a></li>
-            <li><a href="HTML/contacto.html">Solicitar Soporte</a></li>
-          </ul>
-        </div>
-      </div>
-      <p class="small text-center mb-0 mt-4 pt-3 border-top border-secondary">&copy; 2026 TecnoFix Lima. Todos los derechos reservados.</p>
+    <div class="container text-center">
+      <p class="mb-1"><strong class="acento">TecnoFix Lima</strong> - Servicio técnico y reparación</p>
+      <!-- COMPLETAR: cambia el celular de ejemplo por el real -->
+      <p class="small mb-1">Lunes a Sábado, 9:00 a.m. a 7:00 p.m. | Cel. 999 999 999</p>
+      <p class="small mb-0">&copy; 2026 TecnoFix Lima</p>
     </div>
   </footer>
 

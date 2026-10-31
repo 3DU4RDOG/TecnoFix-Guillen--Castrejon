@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380">
+  <rect width="600" height="380" fill="#f2efe9"/>
+  <rect x="250" y="40" width="120" height="75" rx="10" fill="#cfe6c4"/>
+  <rect x="40" y="250" width="110" height="70" rx="10" fill="#cfe6c4"/>
+  <g fill="#ffffff" stroke="#dcd8cf" stroke-width="2">
+    <rect x="0" y="70" width="600" height="20"/><rect x="0" y="165" width="600" height="20"/>
+    <rect x="0" y="265" width="600" height="20"/><rect x="0" y="335" width="600" height="20"/>
+    <rect x="95" y="0" width="20" height="380"/><rect x="225" y="0" width="20" height="380"/>
+    <rect x="385" y="0" width="20" height="380"/><rect x="515" y="0" width="20" height="380"/>
+  </g>
+  <polygon points="0,300 600,60 600,90 0,330" fill="#fbc79b" stroke="#f5a867" stroke-width="2"/>
+  <g transform="translate(305 175)">
+    <ellipse cx="0" cy="2" rx="16" ry="5" fill="#000" opacity=".2"/>
+    <path d="M0 0 C-8 -14 -26 -34 -26 -56 A26 26 0 0 1 26 -56 C26 -34 8 -14 0 0 Z" fill="#f96a07" stroke="#111" stroke-width="3"/>
+    <circle cx="0" cy="-56" r="10" fill="#fff"/>
+  </g>
+  <rect x="235" y="190" width="140" height="30" rx="15" fill="#111"/>
+  <text x="305" y="210" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#fff">TecnoFix Lima</text>
+</svg>
